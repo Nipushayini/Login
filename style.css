@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-image: url(./background.png);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: rotate 10s infinite alternate linear, moveBackground 20s infinite linear;
+}
+
+@keyframes rotate {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+.container{
+    width: 28.5%;
+    height: 965px;
+    color: white;
+    margin-left: 1316px;
+    background: rgba(8, 8, 8, 0.8);
+    padding: 20px 170px;
+    box-shadow: 0 0 10px rgba(27, 26, 26, 0.1);
+}
+.login{
+    text-align: center;
+    margin-top: 250px;
+}
+.word{
+    margin-top: 10px;
+}
+.credential{
+   margin-top: 30px;
+   margin-left: -105px;
+}
+.password,
+.username{
+    margin-top: 10px;
+    width: 400px;
+    height: 70px;
+    border-radius: 5px;
+    background-color: rgba(43, 38, 38, 0.8);
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+}
+.forget {
+    margin-top: 20px;
+    margin-left: -48px;
+}
+.forget a{
+    color: tomato;
+    text-decoration: none;
+}
+.login-btn{
+    margin-top: 50px;
+    width: 300px;
+    height: 60px;
+    border-radius: 5px;
+    margin-left: -50px;
+    background-color: tomato;
+    color: white;
+    font-weight: 600;
+    font-size: 23px;
+}
+.login-btn:hover{
+    background-color: #ff4500;
+}
+
+@media only screen and (width <= 1228px){
+    .container{
+            position: absolute;
+            top: 50%;
+            right: 50%;
+            transform: translate(50%, -50%);
+            padding: 150px;
+            width: 500px;
+            height: 400px;
+            max-width: 600px;
+            min-width: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-radius: 15px;
+    }
+    .login{
+        margin-top: 0;
+    }
+
+}
